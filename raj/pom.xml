@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.spark.test</groupId>
+  <artifactId>raj</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+    <build>
+  
+    <plugins>
+    
+  
+    
+    
+      
+        <plugin>
+            <groupId>org.scala-tools</groupId>
+            <artifactId>maven-scala-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>scala-compile-first</id>
+                    <phase>process-resources</phase>
+                    <goals>
+                        <goal>add-source</goal>
+                        <goal>compile</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        
+        
+    </plugins>
+  </build>
+ <!--  <repositories>
+    <repository>
+        <id>cloudera</id>
+        <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+    </repository>
+</repositories> -->
+   
+   
+  <dependencies>
+  
+   <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
+   <!--
+<dependency>
+    <groupId>org.scala-lang</groupId>
+    <artifactId>scala-library</artifactId>
+    <version>2.12.0-M1</version>
+</dependency>
+   -->
+   <!-- https://mvnrepository.com/artifact/net.liftweb/lift-json -->
+<dependency>
+    <groupId>net.liftweb</groupId>
+    <artifactId>lift-json_2.11</artifactId>
+    <version>3.0-M7</version>
+</dependency>
+
+	<dependency>
+			<groupId>commons-pool</groupId>
+			<artifactId>commons-pool</artifactId>
+			<version>1.4</version>
+	</dependency>
+	<dependency>
+    <groupId>com.univocity</groupId>
+    <artifactId>univocity-parsers</artifactId>
+    <version>2.1.2</version>
+</dependency>
+	<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-catalyst_2.11</artifactId>
+			<version>2.1.0</version>
+			
+	</dependency>
+	
+	<dependency>
+       <groupId>commons-logging</groupId>
+       <artifactId>commons-logging</artifactId>
+       <version>1.1.1</version>
+    </dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.redis/scala-redis -->
+		<dependency>
+    			<groupId>org.redis</groupId>
+    			<artifactId>scala-redis_2.11</artifactId>
+    			<version>0.0.25</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>0.10.1.0</version>
+		</dependency>
+		<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>1.6.1</version>
+    </dependency>
+		
+		
+		
+		
+		
+		
+		<!--  SPARK CONFIG -->
+		<dependency> 
+		    <groupId>org.apache.spark</groupId> 
+		    <artifactId>spark-hive_2.11</artifactId> 
+		    <version>2.1.0</version> 
+		</dependency>
+		
+       <dependency> 
+	    <groupId>org.apache.spark</groupId> 
+	    <artifactId>spark-mllib_2.11</artifactId> 
+	    <version>2.1.0</version> 
+      </dependency> 
+		
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming-kafka_2.11</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+		 <dependency> 
+	         <groupId>org.apache.spark</groupId> 
+	         <artifactId>spark-core_2.11</artifactId> 
+	         <version>2.1.0</version> 
+	         <scope>provided</scope>
+             <exclusions>
+                  <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                   </exclusion>
+             </exclusions>
+         </dependency> 
+
+
+		<dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.11</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        
+        
+        
+        <dependency>
+           <groupId>org.apache.spark</groupId>
+           <artifactId>spark-sql_2.11</artifactId>
+           <version>2.1.0</version>
+        </dependency>
+        
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql-kafka-0-10_2.11</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+	
+    <dependency>
+        <groupId>com.datastax.spark</groupId>
+        <artifactId>spark-cassandra-connector_2.11</artifactId>
+        <version>2.0.3</version>
+    </dependency>	
+	
+       
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
+		</dependency>
+		
+  </dependencies>
+  
+</project>
